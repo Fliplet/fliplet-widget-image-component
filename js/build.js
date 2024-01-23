@@ -46,7 +46,7 @@ Fliplet.Widget.instance({
             );
           }
 
-          if (selectedImageColumn) {
+          if (!selectedImageColumn) {
             return showToastMessage('Please select column');
           }
 
