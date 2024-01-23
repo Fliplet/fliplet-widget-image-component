@@ -56,8 +56,10 @@ Fliplet.Widget.instance({
             let imageValue = null;
 
             if (imageColumnValue) {
-              if (Array.isArray(imageColumnValue) && imageColumnValue.length) {
-                imageValue = imageColumnValue[0];
+              if (Array.isArray(imageColumnValue)) {
+                if (imageColumnValue.length) {
+                  imageValue = imageColumnValue[0];
+                }
               } else {
                 imageValue = imageColumnValue;
               }
