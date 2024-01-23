@@ -38,7 +38,7 @@ Fliplet.Widget.instance({
 
       // Detail view
       Fliplet.Hooks.on('recordContainerDataRetrieved', function(record) {
-        Fliplet.DynamicContainer.get().then(function(container) {
+        return Fliplet.DynamicContainer.get().then(function(container) {
           return container.connection().then(function(connection) {
             dataSourceId = connection.id;
 
@@ -65,7 +65,7 @@ Fliplet.Widget.instance({
               }
             }
 
-            manageImage(imageValue);
+            return manageImage(imageValue);
           });
 
           // List repeater
