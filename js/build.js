@@ -36,22 +36,22 @@ Fliplet.Widget.instance({
         );
       }
 
-      Fliplet.DynamicContainer.get().then(function(container) {
-        return container.connection().then(function(connection) {
-          dataSourceId = connection.id;
+      // Detail view
+      Fliplet.Hooks.on('recordContainerDataRetrieved', function(record) {
+        Fliplet.DynamicContainer.get().then(function(container) {
+          return container.connection().then(function(connection) {
+            dataSourceId = connection.id;
 
-          if (!dataSourceId) {
-            return showToastMessage(
-              'Please select data source from dynamic container'
-            );
-          }
+            if (!dataSourceId) {
+              return showToastMessage(
+                'Please select data source from dynamic container'
+              );
+            }
 
-          if (!selectedImageColumn) {
-            return showToastMessage('Please select column');
-          }
+            if (!selectedImageColumn) {
+              return showToastMessage('Please select column');
+            }
 
-          // Detail view
-          Fliplet.Hooks.on('recordContainerDataRetrieved', function(record) {
             let imageColumnValue = record.entry.data[selectedImageColumn];
             let imageValue = null;
 
