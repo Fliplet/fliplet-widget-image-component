@@ -9,11 +9,11 @@ Fliplet.Widget.instance({
       Fliplet.Widget.initializeChildren(this.$el, this);
 
       const imageComponent = this;
-      const $imageComponent = $(this);
+      // const $imageComponent = $(this);
       const placeholderPath = '../img/placeholder.jpg';
-      const $imageContainer = $imageComponent.find(
-        '.image-component-container'
-      );
+      // const $imageContainer = $imageComponent.find(
+      //   '.image-component-container'
+      // );
 
       let finalImage;
       let dataSourceId = null;
@@ -79,9 +79,10 @@ Fliplet.Widget.instance({
         if (!imageValue && noImageFound === 'Placeholder') {
           finalImage = `<img src="${placeholderPath}" alt="Image component" />`;
         } else {
-          finalImage = `<img src="${Fliplet.Media.authenticate(
-            imageValue
-          )}" alt="Image component" />`;
+          // finalImage = `<img src="${Fliplet.Media.authenticate(
+          //   imageValue
+          // )}" alt="Image component" />`;
+          finalImage = `<img src="${imageValue}" alt="Image component" />`;
         }
 
         if (finalImage) {
