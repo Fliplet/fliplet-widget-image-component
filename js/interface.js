@@ -4,8 +4,8 @@ var dataSourceColumns = [];
 Fliplet.DataSources.getById(702725, {
   attributes: ['columns']
 }).then(async function(dataSource) {
-  dataSourceColumns = dataSource;
-  // .columns.map((el) => {
+  dataSourceColumns = dataSource.columns;
+  // .map((el) => {
   //   return {
   //     id: el,
   //     label: el
