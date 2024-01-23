@@ -4,12 +4,13 @@ var dataSourceColumns = [];
 Fliplet.DataSources.getById(702725, {
   attributes: ['columns']
 }).then(async function(dataSource) {
-  dataSourceColumns = dataSource.columns.map((el) => {
-    return {
-      id: el,
-      label: el
-    };
-  });
+  dataSourceColumns = dataSource;
+  // .columns.map((el) => {
+  //   return {
+  //     id: el,
+  //     label: el
+  //   };
+  // });
 
   Fliplet.Widget.generateInterface({
     title: 'Image component',
@@ -45,7 +46,10 @@ Fliplet.DataSources.getById(702725, {
         type: 'dropdown',
         label: 'Select column',
         options: dataSourceColumns,
-        default: ''
+        default: '',
+        ready: function() {
+          debugger;
+        }
       },
       {
         name: 'noImageFound',
