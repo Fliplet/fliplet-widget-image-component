@@ -46,10 +46,7 @@ Fliplet.DataSources.getById(702725, {
         type: 'dropdown',
         label: 'Select column',
         options: dataSourceColumns,
-        default: '',
-        ready: function() {
-          debugger;
-        }
+        default: ''
       },
       {
         name: 'noImageFound',

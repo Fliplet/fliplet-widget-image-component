@@ -52,7 +52,7 @@ Fliplet.Widget.instance({
 
           // Detail view
           Fliplet.Hooks.on('recordContainerDataRetrieved', function(record) {
-            let imageColumnValue = record.entry[selectedImageColumn];
+            let imageColumnValue = record.entry.data[selectedImageColumn];
             let imageValue = null;
 
             if (imageColumnValue) {
