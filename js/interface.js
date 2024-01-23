@@ -34,7 +34,7 @@ Fliplet.Widget.generateInterface({
       name: 'imageColumn',
       type: 'dropdown',
       label: 'Select column',
-      options: dataSourceColumns,
+      options: [],
       default: '',
       ready: async function() {
         if (Fliplet.DynamicContainer) {
@@ -53,6 +53,8 @@ Fliplet.Widget.generateInterface({
                     label: el
                   };
                 });
+                // Fliplet.Helper.field('imageColumn');
+                debugger;
 
                 return Promise.resolve(true);
               });
