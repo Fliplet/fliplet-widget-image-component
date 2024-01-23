@@ -34,33 +34,33 @@ Fliplet.Widget.generateInterface({
       name: 'imageColumn',
       type: 'dropdown',
       label: 'Select column',
-      options: [],
+      options: dataSourceColumns,
       default: '',
       ready: async function() {
-        if (Fliplet.DynamicContainer) {
-          return await Fliplet.DynamicContainer.get().then(function(
-            container
-          ) {
-            return container.connection().then(function(connection) {
-              return connection.id;
-            }).then((dataSourceId) => {
-              return Fliplet.DataSources.getById(dataSourceId, {
-                attributes: ['columns']
-              }).then(async function(dataSource) {
-                dataSourceColumns = dataSource.columns.map((el) => {
-                  return {
-                    id: el,
-                    label: el
-                  };
-                });
-                // Fliplet.Helper.field('imageColumn');
-                debugger;
-
-                return Promise.resolve(true);
-              });
-            });
+        // if (Fliplet.DynamicContainer) {
+        //   return await Fliplet.DynamicContainer.get().then(function(
+        //     container
+        //   ) {
+        //     return container.connection().then(function(connection) {
+        //       return connection.id;
+        //     }).then((dataSourceId) => {
+        return Fliplet.DataSources.getById(702725, {
+          attributes: ['columns']
+        }).then(async function(dataSource) {
+          dataSourceColumns = dataSource.columns.map((el) => {
+            return {
+              id: el,
+              label: el
+            };
           });
-        }
+          // Fliplet.Helper.field('imageColumn');
+          debugger;
+
+          return Promise.resolve(true);
+        });
+        // });
+        //   });
+        // }
       }
     },
     {
