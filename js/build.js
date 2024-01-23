@@ -85,7 +85,8 @@ Fliplet.Widget.instance({
         }
 
         if (finalImage) {
-          $imageContainer.html(finalImage);
+          // $imageContainer.html(finalImage);
+          $(document).find('.image-component-container').html(finalImage);
         }
       }
 
