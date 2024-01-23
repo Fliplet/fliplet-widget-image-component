@@ -1,7 +1,7 @@
 // // This function is used to generate the interface for the widget
 var dataSourceColumns = [];
 
-return Fliplet.DataSources.getById(702725, {
+Fliplet.DataSources.getById(702725, {
   attributes: ['columns']
 }).then(async function(dataSource) {
   dataSourceColumns = dataSource.columns.map((el) => {
