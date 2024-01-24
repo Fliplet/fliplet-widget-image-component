@@ -6,7 +6,7 @@ Fliplet.Widget.instance({
     template: ['<div class="image-component-container"></div>'].join(''),
     ready: async function() {
       // Initialize children components when this widget is ready
-      await Fliplet.Widget.initializeChildren(this.$el, this);
+      Fliplet.Widget.initializeChildren(this.$el, this);
 
       const imageComponent = this;
       // const $imageComponent = $(this);
