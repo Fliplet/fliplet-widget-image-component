@@ -34,7 +34,8 @@
     "assets": [
       "css/build.css",
       "js/build.js",
-      "css/index.scss"
+      "css/index.scss",
+      "img/placeholder.jpg"
     ],
     "appAssets": []
   }

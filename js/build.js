@@ -8,13 +8,6 @@ Fliplet.Widget.instance({
       // Initialize children components when this widget is ready
       Fliplet.Widget.initializeChildren(this.$el, this);
 
-      const path = require('path');
-
-      debugger;
-      const imagePath = path.join(__dirname, 'img', 'placeholder.jpg');
-
-      console.log('Image path:', imagePath);
-
       const imageComponent = this;
       const $imageComponent = $(this);
       const placeholderPath = '../img/placeholder.jpg';
