@@ -38,7 +38,7 @@ Fliplet.Widget.instance({
 
       // Detail view
       Fliplet.Hooks.on('recordContainerDataRetrieved', function(record) {
-        return Fliplet.DynamicContainer.get().then(function(container) {
+        Fliplet.DynamicContainer.get().then(function(container) {
           return container.connection().then(function(connection) {
             dataSourceId = connection.id;
 
