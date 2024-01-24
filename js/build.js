@@ -9,7 +9,7 @@ Fliplet.Widget.instance({
     ].join(''),
     ready: async function() {
       // Initialize children components when this widget is ready
-      // Fliplet.Widget.initializeChildren(this.$el, this);
+      Fliplet.Widget.initializeChildren(this.$el, this);
 
       const imageComponent = this;
       const $imageComponent = $(this);
