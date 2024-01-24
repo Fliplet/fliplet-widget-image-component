@@ -96,7 +96,8 @@ Fliplet.Widget.instance({
         if (finalImage) {
           debugger;
           // $imageContainer.html(finalImage);
-          $(document).find('.xxx').attr('src', finalImage);
+          // $(document).find('.xxx').attr('src', finalImage);
+          $imageContainer.find('.xxx').attr('src', finalImage);
         }
       }
 
