@@ -4,8 +4,8 @@ Fliplet.Widget.instance({
   displayName: 'Image component',
   render: {
     template: [
-      // '<div data-view="image-component-container" class="image-component-container"></div>',
-      '<img class="xxx" src="" alt="Image component" />'
+      '<div class="image-component-container"></div>'
+      // '<img class="xxx" src="" alt="Image component" />'
     ].join(''),
     ready: async function() {
       // Initialize children components when this widget is ready
@@ -16,11 +16,11 @@ Fliplet.Widget.instance({
       // const placeholderPath = '../img/placeholder.jpg'; // read it from project check with product
       const placeholderPath = 'https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png';
       const $imageContainer = $imageComponent.find(
-        // '.image-component-container'
-        '.xxx'
+        '.image-component-container'
       );
 
       console.log($imageContainer);
+      debugger
 
       let finalImage;
       let dataSourceId = null;
@@ -86,12 +86,12 @@ Fliplet.Widget.instance({
 
       function manageImage(imageValue) {
         if (!imageValue && noImageFound === 'Placeholder') {
-          finalImage = placeholderPath; // `<img src="${placeholderPath}" alt="Image component" />`;
+          finalImage = `<img src="${placeholderPath}" alt="Image component" />`;
         } else {
           // finalImage = `<img src="${Fliplet.Media.authenticate(
           //   imageValue
           // )}" alt="Image component" />`;
-          finalImage = imageValue; // `<img src="${imageValue}" alt="Image component" />`;
+          finalImage = `<img src="${imageValue}" alt="Image component" />`;
         }
 
         if (finalImage) {
@@ -99,7 +99,7 @@ Fliplet.Widget.instance({
           // $imageContainer.html(finalImage);
           // $(document).find('.xxx').attr('src', finalImage);
           // $imageContainer.find('.xxx').attr('src', finalImage);
-          $imageComponent[0].$el.find('.xxx').attr('src', finalImage);
+          $imageComponent[0].$el.find('.image-component-container').attr('src', finalImage);
         }
       }
 
