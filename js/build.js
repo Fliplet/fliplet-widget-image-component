@@ -10,7 +10,8 @@ Fliplet.Widget.instance({
 
       const imageComponent = this;
       const $imageComponent = $(this);
-      const placeholderPath = '../img/placeholder.jpg';
+      // const placeholderPath = '../img/placeholder.jpg'; // read it from project check with product
+      const placeholderPath = 'https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png';
       const $imageContainer = $imageComponent.find(
         '.image-component-container'
       );
