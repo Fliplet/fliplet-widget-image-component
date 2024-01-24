@@ -85,12 +85,12 @@ Fliplet.Widget.instance({
 
       function manageImage(imageValue) {
         if (!imageValue && noImageFound === 'Placeholder') {
-          finalImage = `<img src="${placeholderPath}" alt="Image component" />`;
+          finalImage = placeholderPath; // `<img src="${placeholderPath}" alt="Image component" />`;
         } else {
           // finalImage = `<img src="${Fliplet.Media.authenticate(
           //   imageValue
           // )}" alt="Image component" />`;
-          finalImage = `<img src="${imageValue}" alt="Image component" />`;
+          finalImage = imageValue; // `<img src="${imageValue}" alt="Image component" />`;
         }
 
         if (finalImage) {
