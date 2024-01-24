@@ -37,7 +37,7 @@ Fliplet.Widget.instance({
       }
 
       // Detail view
-      await Fliplet.DynamicContainer.get().then(function(container) {
+      Fliplet.DynamicContainer.get().then(function(container) {
         return container.connection().then(function(connection) {
           dataSourceId = connection.id;
 
@@ -50,7 +50,6 @@ Fliplet.Widget.instance({
           return Promise.resolve(true);
         });
       });
-
 
       Fliplet.Hooks.on('recordContainerDataRetrieved', function(record) {
         if (!selectedImageColumn) {
