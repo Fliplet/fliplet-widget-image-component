@@ -21,7 +21,6 @@ Fliplet.Widget.instance({
       );
 
       console.log($imageContainer);
-      debugger;
 
       let finalImage;
       let dataSourceId = null;
@@ -99,7 +98,8 @@ Fliplet.Widget.instance({
           debugger;
           // $imageContainer.html(finalImage);
           // $(document).find('.xxx').attr('src', finalImage);
-          $imageContainer.find('.xxx').attr('src', finalImage);
+          // $imageContainer.find('.xxx').attr('src', finalImage);
+          $imageComponent[0].$el.find('.xxx').attr('src', finalImage);
         }
       }
 
