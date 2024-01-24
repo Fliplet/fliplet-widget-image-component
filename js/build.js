@@ -36,21 +36,6 @@ Fliplet.Widget.instance({
         );
       }
 
-      // Detail view
-      Fliplet.DynamicContainer.get().then(function(container) {
-        return container.connection().then(function(connection) {
-          dataSourceId = connection.id;
-
-          if (!dataSourceId) {
-            return showToastMessage(
-              'Please select data source from dynamic container'
-            );
-          }
-
-          return Promise.resolve(true);
-        });
-      });
-
       Fliplet.Hooks.on('recordContainerDataRetrieved', function(record) {
         if (!selectedImageColumn) {
           return showToastMessage('Please select column');
@@ -70,6 +55,19 @@ Fliplet.Widget.instance({
         }
 
         return manageImage(imageValue);
+      });
+
+      // Detail view
+      Fliplet.DynamicContainer.get().then(function(container) {
+        return container.connection().then(function(connection) {
+          dataSourceId = connection.id;
+
+          if (!dataSourceId) {
+            return showToastMessage(
+              'Please select data source from dynamic container'
+            );
+          }
+        });
       });
 
       // List repeater
