@@ -9,7 +9,7 @@ Fliplet.Widget.instance({
     ].join(''),
     ready: async function() {
       // Initialize children components when this widget is ready
-      Fliplet.Widget.initializeChildren(this.$el, this);
+      // Fliplet.Widget.initializeChildren(this.$el, this);
 
       const imageComponent = this;
       const $imageComponent = $(this);
@@ -19,9 +19,6 @@ Fliplet.Widget.instance({
       // $imageComponent.find(
       //   '.image-component-container'
       // );
-
-      console.log($imageContainer);
-      debugger
 
       let finalImage;
       let dataSourceId = null;
@@ -96,7 +93,6 @@ Fliplet.Widget.instance({
         }
 
         if (finalImage) {
-          debugger;
           // $imageContainer.html(finalImage);
           // $(document).find('.xxx').attr('src', finalImage);
           $imageContainer.html(finalImage);
