@@ -9,11 +9,11 @@ Fliplet.Widget.instance({
       Fliplet.Widget.initializeChildren(this.$el, this);
 
       const imageComponent = this;
-      // const $imageComponent = $(this);
+      const $imageComponent = $(this);
       const placeholderPath = '../img/placeholder.jpg';
-      // const $imageContainer = $imageComponent.find(
-      //   '.image-component-container'
-      // );
+      const $imageContainer = $imageComponent.find(
+        '.image-component-container'
+      );
 
       let finalImage;
       let dataSourceId = null;
@@ -88,8 +88,8 @@ Fliplet.Widget.instance({
         }
 
         if (finalImage) {
-          // $imageContainer.html(finalImage);
-          $(document).find('.image-component-container').html(finalImage);
+          $imageContainer.html(finalImage);
+          // $(document).find('.image-component-container').html(finalImage);
         }
       }
 
