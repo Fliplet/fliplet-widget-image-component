@@ -3,7 +3,8 @@ Fliplet.Widget.instance({
   name: 'image-component',
   displayName: 'Image component',
   render: {
-    template: ['<div data-view="image-component-container" class="image-component-container"></div>',
+    template: [
+      // '<div data-view="image-component-container" class="image-component-container"></div>',
       '<img class="xxx" src="" alt="Image component" />'
     ].join(''),
     ready: async function() {
@@ -93,9 +94,9 @@ Fliplet.Widget.instance({
         }
 
         if (finalImage) {
-          debugger
+          debugger;
           // $imageContainer.html(finalImage);
-          $(document).find('.image-component-container').html(finalImage);
+          $(document).find('.xxx').attr('src', finalImage);
         }
       }
 
