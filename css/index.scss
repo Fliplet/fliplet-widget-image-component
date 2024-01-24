@@ -1,0 +1,332 @@
+/* UPDATE PACKAGE NAME AND VARIABLE PREFIX USING THE SAME VALUES AS "widget.json" */
+$packageName: 'com.fliplet.image-component';
+$variablePrefix: "imageComponent";
+
+@mixin componentStyles($options: (), $widgetInstanceId: "", $widgetInstanceUUID: "") {
+    /* LIST HERE ALL VARIABLES FROM YOUR THEME, INCLUDING TABLET AND DESKTOP */
+    $configuration: map-merge(
+      (
+        imageComponentPosition: $imageComponentPosition,
+        imageComponentDisplay: $imageComponentDisplay,
+        imageComponentPositionTop: $imageComponentPositionTop,
+        imageComponentPositionRight: $imageComponentPositionRight,
+        imageComponentPositionBottom: $imageComponentPositionBottom,
+        imageComponentPositionLeft: $imageComponentPositionLeft,
+        imageComponentIndex: $imageComponentIndex,
+        imageComponentWidth: $imageComponentWidth,
+        imageComponentHeight: $imageComponentHeight,
+        imageComponentMinWidth: $imageComponentMinWidth,
+        imageComponentMaxWidth: $imageComponentMaxWidth,
+        imageComponentMinHeight: $imageComponentMinHeight,
+        imageComponentMaxHeight: $imageComponentMaxHeight,
+        imageComponentMarginTop: $imageComponentMarginTop,
+        imageComponentMarginRight: $imageComponentMarginRight,
+        imageComponentMarginBottom: $imageComponentMarginBottom,
+        imageComponentMarginLeft: $imageComponentMarginLeft,
+        imageComponentPaddingTop: $imageComponentPaddingTop,
+        imageComponentPaddingRight: $imageComponentPaddingRight,
+        imageComponentPaddingBottom: $imageComponentPaddingBottom,
+        imageComponentPaddingLeft: $imageComponentPaddingLeft,
+        imageComponentBorderSides: $imageComponentBorderSides,
+        imageComponentBorderWidth: $imageComponentComponentBorderWidth,
+        imageComponentBorderStyle: $imageComponentBorderStyle,
+        imageComponentBorderColor: $imageComponentBorderColor,
+        imageComponentBorderRadius: $imageComponentBorderRadius,
+        imageComponentShadowStyle: $imageComponentShadowStyle,
+        imageComponentShadowXoffset: $imageComponentShadowXoffset,
+        imageComponentShadowYoffset: $imageComponentShadowYoffset,
+        imageComponentShadowBlur: $imageComponentShadowBlur,
+        imageComponentShadowSpread: $imageComponentShadowSpread,
+        imageComponentShadowColor: $imageComponentShadowColor,
+        imageComponentVisibility: $imageComponentVisibility,
+        imageComponentPositionTablet: $imageComponentPositionTablet,
+        imageComponentDisplayTablet: $imageComponentDisplayTablet,
+        imageComponentPositionTopTablet: $imageComponentPositionTopTablet,
+        imageComponentPositionRightTablet: $imageComponentPositionRightTablet,
+        imageComponentPositionBottomTablet: $imageComponentPositionBottomTablet,
+        imageComponentPositionLeftTablet: $imageComponentPositionLeftTablet,
+        imageComponentIndexTablet: $imageComponentIndexTablet,
+        imageComponentWidthTablet: $imageComponentWidthTablet,
+        imageComponentHeightTablet: $imageComponentHeightTablet,
+        imageComponentMinWidthTablet: $imageComponentMinWidthTablet,
+        imageComponentMaxWidthTablet: $imageComponentMaxWidthTablet,
+        imageComponentMinHeightTablet: $imageComponentMinHeightTablet,
+        imageComponentMaxHeightTablet: $imageComponentMaxHeightTablet,
+        imageComponentMarginTopTablet: $imageComponentMarginTopTablet,
+        imageComponentMarginRightTablet: $imageComponentMarginRightTablet,
+        imageComponentMarginBottomTablet: $imageComponentMarginBottomTablet,
+        imageComponentMarginLeftTablet: $imageComponentMarginLeftTablet,
+        imageComponentPaddingTopTablet: $imageComponentPaddingTopTablet,
+        imageComponentPaddingRightTablet: $imageComponentPaddingRightTablet,
+        imageComponentPaddingBottomTablet: $imageComponentPaddingBottomTablet,
+        imageComponentPaddingLeftTablet: $imageComponentPaddingLeftTablet,
+        imageComponentBorderSidesTablet: $imageComponentBorderSidesTablet,
+        imageComponentBorderWidthTablet: $imageComponentBorderWidthTablet,
+        imageComponentBorderStyleTablet: $imageComponentBorderStyleTablet,
+        imageComponentBorderColorTablet: $imageComponentBorderColorTablet,
+        imageComponentBorderRadiusTablet: $imageComponentBorderRadiusTablet,
+        imageComponentShadowStyleTablet: $imageComponentShadowStyleTablet,
+        imageComponentShadowXoffsetTablet: $imageComponentShadowXoffsetTablet,
+        imageComponentShadowYoffsetTablet: $imageComponentShadowYoffsetTablet,
+        imageComponentShadowBlurTablet: $imageComponentShadowBlurTablet,
+        imageComponentShadowSpreadTablet: $imageComponentShadowSpreadTablet,
+        imageComponentShadowColorTablet: $imageComponentShadowColorTablet,
+        imageComponentVisibilityTablet: $imageComponentVisibilityTablet,
+        imageComponentPositionDesktop: $imageComponentPositionDesktop,
+        imageComponentDisplayDesktop: $imageComponentDisplayDesktop,
+        imageComponentPositionTopDesktop: $imageComponentPositionTopDesktop,
+        imageComponentPositionRightDesktop: $imageComponentPositionRightDesktop,
+        imageComponentPositionBottomDesktop: $imageComponentPositionBottomDesktop,
+        imageComponentPositionLeftDesktop: $imageComponentPositionLeftDesktop,
+        imageComponentIndexDesktop: $imageComponentIndexDesktop,
+        imageComponentWidthDesktop: $imageComponentWidthDesktop,
+        imageComponentHeightDesktop: $imageComponentHeightDesktop,
+        imageComponentMinWidthDesktop: $imageComponentMinWidthDesktop,
+        imageComponentMaxWidthDesktop: $imageComponentMaxWidthDesktop,
+        imageComponentMinHeightDesktop: $imageComponentMinHeightDesktop,
+        imageComponentMaxHeightDesktop: $imageComponentMaxHeightDesktop,
+        imageComponentMarginTopDesktop: $imageComponentMarginTopDesktop,
+        imageComponentMarginRightDesktop: $imageComponentMarginRightDesktop,
+        imageComponentMarginBottomDesktop: $imageComponentMarginBottomDesktop,
+        imageComponentMarginLeftDesktop: $imageComponentMarginLeftDesktop,
+        imageComponentPaddingTopDesktop: $imageComponentPaddingTopDesktop,
+        imageComponentPaddingRightDesktop: $imageComponentPaddingRightDesktop,
+        imageComponentPaddingBottomDesktop: $imageComponentPaddingBottomDesktop,
+        imageComponentPaddingLeftDesktop: $imageComponentPaddingLeftDesktop,
+        imageComponentBorderSidesDesktop: $imageComponentBorderSidesDesktop,
+        imageComponentBorderWidthDesktop: $imageComponentBorderWidthDesktop,
+        imageComponentBorderStyleDesktop: $imageComponentBorderStyleDesktop,
+        imageComponentBorderColorDesktop: $imageComponentBorderColorDesktop,
+        imageComponentBorderRadiusDesktop: $imageComponentBorderRadiusDesktop,
+        imageComponentShadowStyleDesktop: $imageComponentShadowStyleDesktop,
+        imageComponentShadowXoffsetDesktop: $imageComponentShadowXoffsetDesktop,
+        imageComponentShadowYoffsetDesktop: $imageComponentShadowYoffsetDesktop,
+        imageComponentShadowBlurDesktop: $imageComponentShadowBlurDesktop,
+        imageComponentShadowSpreadDesktop: $imageComponentShadowSpreadDesktop,
+        imageComponentShadowColorDesktop: $imageComponentShadowColorDesktop,
+        imageComponentVisibilityDesktop: $imageComponentVisibilityDesktop
+      ),
+      $options
+    );
+  
+    $instanceSelector: '[data-widget-package="com.fliplet.image-component"]';
+    @if $widgetInstanceUUID != "" {
+      $instanceSelector: '#{$instanceSelector}[data-uuid="#{$widgetInstanceUUID}"]';
+    } @else if $widgetInstanceId != "" {
+      $instanceSelector: '#{$instanceSelector}[data-id="#{$widgetInstanceId}"]';
+    }
+  
+    #{$instanceSelector} {
+      flex-shrink: 0; /* Fix for IE11 when images are inside a flex container */
+      position: map-get($configuration, ComponentPosition);
+      z-index: map-get($configuration, imageIndex);
+  
+      @if map-get($configuration, imageComponentPosition) == "relative" {
+        @if map-get($configuration, imageComponentVisibility) == "visible" {
+          @if map-get($configuration, imageComponentWidth) == "100%" {
+            display: block !important;
+          } @else {
+            display: map-get($configuration, imageComponentDisplay) !important;
+          }
+        } @else {
+          display: none !important;
+        }
+      } @else {
+        @if map-get($configuration, imageComponentVisibility) == "visible" {
+          display: block !important;
+        } @else {
+          display: none !important;
+        }
+  
+        top: map-get($configuration, imageComponentPositionTop);
+        right: map-get($configuration, imageComponentPositionRight);
+        bottom: map-get($configuration, imageComponentPositionBottom);
+        left: map-get($configuration, imageComponentPositionLeft);
+      }
+      width: map-get($configuration, imageComponentWidth);
+      min-width: map-get($configuration, imageComponentMinWidth);
+      max-width: map-get($configuration, imageComponentMaxWidth);
+      margin: map-get($configuration, imageComponentMarginTop) map-get($configuration, imageComponentMarginRight)
+        map-get($configuration, imageComponentMarginBottom) map-get($configuration, imageComponentMarginLeft);
+      padding: map-get($configuration, imageComponentPaddingTop) map-get($configuration, imageComponentPaddingRight)
+        map-get($configuration, imageComponentPaddingBottom) map-get($configuration, imageComponentPaddingLeft);
+  
+      // Styles for tablet
+      @include above($tabletBreakpoint) {
+        position: map-get($configuration, imageComponentPositionTablet);
+        z-index: map-get($configuration, imageComponentIndexTablet);
+  
+        @if map-get($configuration, imageComponentPositionTablet) == "relative" {
+          @if map-get($configuration, imageComponentVisibilityTablet) == "visible" {
+            @if map-get($configuration, imageComponentWidthTablet) == "100%" {
+              display: block !important;
+            } @else {
+              display: map-get($configuration, imageComponentDisplayTablet) !important;
+            }
+          } @else {
+            display: none !important;
+          }
+        } @else {
+          @if map-get($configuration, imageComponentVisibilityTablet) == "visible" {
+            display: block !important;
+          } @else {
+            display: none !important;
+          }
+  
+          top: map-get($configuration, imageComponentPositionTopTablet);
+          right: map-get($configuration, imageComponentPositionRightTablet);
+          bottom: map-get($configuration, imageComponentPositionBottomTablet);
+          left: map-get($configuration, imageComponentPositionLeftTablet);
+        }
+  
+        width: map-get($configuration, imageComponentWidthTablet);
+        min-width: map-get($configuration, imageComponentMinWidthTablet);
+        max-width: map-get($configuration, imageComponentMaxWidthTablet);
+        margin: map-get($configuration, imageComponentMarginTopTablet)
+          map-get($configuration, imageComponentMarginRightTablet)
+          map-get($configuration, imageComponentMarginBottomTablet)
+          map-get($configuration, imageComponentMarginLeftTablet);
+        padding: map-get($configuration, imageComponentPaddingTopTablet)
+          map-get($configuration, imageComponentPaddingRightTablet)
+          map-get($configuration, imageComponentPaddingBottomTablet)
+          map-get($configuration, imageComponentPaddingLeftTablet);
+      }
+  
+      // Styles for desktop
+      @include above($desktopBreakpoint) {
+        position: map-get($configuration, imageComponentPositionDesktop);
+        z-index: map-get($configuration, imageIndexDesktop);
+  
+        @if map-get($configuration, imageComponentPositionDesktop) == "relative" {
+          @if map-get($configuration, imageComponentVisibilityDesktop) == "visible" {
+            @if map-get($configuration, imageComponentWidthDesktop) == "100%" {
+              display: block !important;
+            } @else {
+              display: map-get($configuration, imageComponentDisplayDesktop) !important;
+            }
+          } @else {
+            display: none !important;
+          }
+        } @else {
+          @if map-get($configuration, imageComponentVisibilityDesktop) == "visible" {
+            display: block !important;
+          } @else {
+            display: none !important;
+          }
+  
+          top: map-get($configuration, imageComponentPositionTopDesktop);
+          right: map-get($configuration, imageComponentPositionRightDesktop);
+          bottom: map-get($configuration, imageComponentPositionBottomDesktop);
+          left: map-get($configuration, imageComponentPositionLeftDesktop);
+        }
+  
+        width: map-get($configuration, imageComponentWidthDesktop);
+        min-width: map-get($configuration, imageComponentMinWidthDesktop);
+        max-width: map-get($configuration, imageComponentMaxWidthDesktop);
+        margin: map-get($configuration, imageComponentMarginTopDesktop)
+          map-get($configuration, imageComponentMarginRightDesktop)
+          map-get($configuration, imageComponentMarginBottomDesktop)
+          map-get($configuration, imageComponentMarginLeftDesktop);
+        padding: map-get($configuration, imageComponentPaddingTopDesktop)
+          map-get($configuration, imageComponentPaddingRightDesktop)
+          map-get($configuration, imageComponentPaddingBottomDesktop)
+          map-get($configuration, imageComponentPaddingLeftDesktop);
+      }
+  
+      img[data-image-id] {
+        height: map-get($configuration, imageComponentHeight);
+        min-height: map-get($configuration, imageComponentMinHeight);
+        max-height: map-get($configuration, imageComponentMaxHeight);
+  
+        @include borderOnly(
+          (
+            borderSides: map-get($configuration, imageComponentBorderSides),
+            borderWidth: map-get($configuration, imageComponentBorderWidth),
+            borderStyle: map-get($configuration, imageComponentBorderStyle),
+            borderColor: map-get($configuration, imageComponentBorderColor)
+          )
+        );
+        border-radius: map-get($configuration, imageComponentBorderRadius);
+  
+        @include shadowOnly(
+          (
+            shadowStyle: map-get($configuration, imageComponentShadowStyle),
+            shadowXOffset: map-get($configuration, imageComponentShadowXoffset),
+            shadowYOffset: map-get($configuration, imageComponentShadowYoffset),
+            shadowBlur: map-get($configuration, imageComponentShadowBlur),
+            shadowSpread: map-get($configuration, imageComponentShadowSpread),
+            shadowColor: map-get($configuration, imageComponentShadowColor)
+          )
+        );
+  
+        // Styles for tablet
+        @include above($tabletBreakpoint) {
+          height: map-get($configuration, imageComponentHeightTablet);
+          min-height: map-get($configuration, imageComponentMinHeightTablet);
+          max-height: map-get($configuration, imageComponentMaxHeightTablet);
+  
+          @include borderOnly(
+            (
+              borderSides: map-get($configuration, imageComponentBorderSidesTablet),
+              borderWidth: map-get($configuration, imageComponentBorderWidthTablet),
+              borderStyle: map-get($configuration, imageComponentBorderStyleTablet),
+              borderColor: map-get($configuration, imageComponentBorderColorTablet)
+            )
+          );
+          border-radius: map-get($configuration, imageBorderRadiusTablet);
+  
+          @include shadowOnly(
+            (
+              shadowStyle: map-get($configuration, imageComponentShadowStyleTablet),
+              shadowXOffset: map-get($configuration, imageComponentShadowXoffsetTablet),
+              shadowYOffset: map-get($configuration, imageComponentShadowYoffsetTablet),
+              shadowBlur: map-get($configuration, imageComponentShadowBlurTablet),
+              shadowSpread: map-get($configuration, imageComponentShadowSpreadTablet),
+              shadowColor: map-get($configuration, imageComponentShadowColorTablet)
+            )
+          );
+        }
+  
+        // Styles for desktop
+        @include above($desktopBreakpoint) {
+          height: map-get($configuration, imageComponentHeightDesktop);
+          min-height: map-get($configuration, imageComponentMinHeightDesktop);
+          max-height: map-get($configuration, imageComponentMaxHeightDesktop);
+  
+          @include borderOnly(
+            (
+              borderSides: map-get($configuration, imageComponentBorderSidesDesktop),
+              borderWidth: map-get($configuration, imageComponentBorderWidthDesktop),
+              borderStyle: map-get($configuration, imageComponentBorderStyleDesktop),
+              borderColor: map-get($configuration, imageComponentBorderColorDesktop)
+            )
+          );
+          border-radius: map-get($configuration, imageComponentBorderRadiusDesktop);
+  
+          @include shadowOnly(
+            (
+              shadowStyle: map-get($configuration, imageComponentShadowStyleDesktop),
+              shadowXOffset: map-get($configuration, imageComponentShadowXoffsetDesktop),
+              shadowYOffset: map-get($configuration, imageComponentShadowYoffsetDesktop),
+              shadowBlur: map-get($configuration, imageComponentShadowBlurDesktop),
+              shadowSpread: map-get($configuration, imageComponentShadowSpreadDesktop),
+              shadowColor: map-get($configuration, imageComponentShadowColorDesktop)
+            )
+          );
+        }
+      }
+    }
+  }
+  
+
+  /* Export common styles */
+@include componentStyles();
+
+/* Export styles for each widget instance */
+@if variable-exists(widgetInstances) {
+  @each $widgetInstance in $widgetInstances {
+    @if nth($widgetInstance, 2)==$variablePrefix {
+      @include componentStyles(nth($widgetInstance, 3), nth($widgetInstance, 1), nth($widgetInstance, 4));
+    }
+  }
+}

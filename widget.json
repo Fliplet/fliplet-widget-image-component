@@ -27,7 +27,8 @@
       "jquery",
       "bootstrap",
       "fliplet-core",
-      "fliplet-helper"
+      "fliplet-helper",
+      "css/index.scss"
     ],
     "assets": [
       "css/build.css",
@@ -35,8 +36,5 @@
       "css/index.scss"
     ],
     "appAssets": []
-  },
-  "themeSettings": {
-    "variablePrefix": "image-component"
   }
 }
