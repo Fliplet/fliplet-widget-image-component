@@ -20,7 +20,6 @@ Fliplet.Widget.instance({
       //   '.image-component-container'
       // );
 
-      let finalImage;
       let dataSourceId = null;
       let selectedImageColumn = null;
       let noImageFound = null;
@@ -83,8 +82,12 @@ Fliplet.Widget.instance({
       // });
 
       function manageImage(imageValue) {
-        if (!imageValue && noImageFound === 'Placeholder') {
-          finalImage = `<img src="${placeholderPath}" alt="Image component" />`;
+        let finalImage = '';
+
+        if (!imageValue) {
+          if (noImageFound === 'Placeholder') {
+            finalImage = `<img src="${placeholderPath}" alt="Image component" />`;
+          }
         } else {
           // finalImage = `<img src="${Fliplet.Media.authenticate(
           //   imageValue
@@ -92,11 +95,9 @@ Fliplet.Widget.instance({
           finalImage = `<img src="${imageValue}" alt="Image component" />`;
         }
 
-        if (finalImage) {
-          // $imageContainer.html(finalImage);
-          // $(document).find('.xxx').attr('src', finalImage);
-          $imageContainer.html(finalImage);
-        }
+        // $imageContainer.html(finalImage);
+        // $(document).find('.xxx').attr('src', finalImage);
+        $imageContainer.html(finalImage);
       }
 
       // function manageImageAsArray(arrayValues) {

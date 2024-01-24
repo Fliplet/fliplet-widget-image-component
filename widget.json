@@ -5,9 +5,7 @@
   "icon": "img/icon.png",
   "tags": ["type:component", "category:general"],
   "provider_only": false,
-  "references": [
-    "image-content:richContent"
-  ],
+  "references": [],
   "settings": {
     "asyncRendering": true,
     "interfaceWidgetPackage": "com.fliplet.helper-configuration"
@@ -37,5 +35,8 @@
       "css/index.scss"
     ],
     "appAssets": []
+  },
+  "themeSettings": {
+    "variablePrefix": "image-component"
   }
 }
