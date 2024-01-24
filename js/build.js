@@ -99,7 +99,7 @@ Fliplet.Widget.instance({
           debugger;
           // $imageContainer.html(finalImage);
           // $(document).find('.xxx').attr('src', finalImage);
-          $imageContainer.find('.image-component-container').attr('src', finalImage);
+          $imageContainer.find('.image-component-container').html(finalImage);
         }
       }
 
