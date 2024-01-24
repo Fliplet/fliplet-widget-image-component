@@ -3,7 +3,7 @@ Fliplet.Widget.instance({
   name: 'image-component',
   displayName: 'Image component',
   render: {
-    template: ['<div class="image-component-container"></div>'].join(''),
+    template: ['<div data-view="image-component-container" class="image-component-container"></div>'].join(''),
     ready: async function() {
       // Initialize children components when this widget is ready
       Fliplet.Widget.initializeChildren(this.$el, this);
@@ -123,5 +123,12 @@ Fliplet.Widget.instance({
         return Fliplet.UI.Toast(message);
       }
     }
-  }
+  },
+  views: [
+    {
+      name: 'image-component-container',
+      displayName: 'image-component-container',
+      placeholder: '<div class="well text-center">Add components to build your image-component-container</div>'
+    }
+  ]
 });
