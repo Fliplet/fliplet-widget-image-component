@@ -15,9 +15,10 @@ Fliplet.Widget.instance({
       const $imageComponent = $(this);
       // const placeholderPath = '../img/placeholder.jpg'; // read it from project check with product
       const placeholderPath = 'https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png';
-      const $imageContainer = $imageComponent.find(
-        '.image-component-container'
-      );
+      const $imageContainer = $($imageComponent[0].$el[0]).find('.image-component-container');
+      // $imageComponent.find(
+      //   '.image-component-container'
+      // );
 
       console.log($imageContainer);
       debugger
@@ -98,8 +99,7 @@ Fliplet.Widget.instance({
           debugger;
           // $imageContainer.html(finalImage);
           // $(document).find('.xxx').attr('src', finalImage);
-          // $imageContainer.find('.xxx').attr('src', finalImage);
-          $imageComponent[0].$el.find('.image-component-container').attr('src', finalImage);
+          $imageContainer.find('.image-component-container').attr('src', finalImage);
         }
       }
 
