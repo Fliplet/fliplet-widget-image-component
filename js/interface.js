@@ -1,16 +1,11 @@
 // // This function is used to generate the interface for the widget
 var dataSourceColumns = [];
+// TODO check how to get dataSourceId
 
 Fliplet.DataSources.getById(702725, {
   attributes: ['columns']
 }).then(async function(dataSource) {
   dataSourceColumns = dataSource.columns;
-  // .map((el) => {
-  //   return {
-  //     id: el,
-  //     label: el
-  //   };
-  // });
 
   Fliplet.Widget.generateInterface({
     title: 'Image component',

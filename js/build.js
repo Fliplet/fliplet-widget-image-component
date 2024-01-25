@@ -75,11 +75,13 @@ Fliplet.Widget.instance({
       });
 
       // List repeater
-      // Fliplet.Hooks.on('repeaterDataRetrieved', function(options) {
-      //   options.data.length
-      //   options.data.map(el => el.id)
-      //   options.data[0].dataSourceId
-      // });
+      Fliplet.Hooks.on('repeaterDataRetrieved', function(options) {
+        console.log(options);
+        debugger;
+        // options.data.length
+        // options.data.map(el => el.id)
+        // options.data[0].dataSourceId
+      });
 
       function manageImage(imageValue) {
         let finalImage = '';
